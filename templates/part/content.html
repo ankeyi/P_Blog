@@ -1,0 +1,52 @@
+{{define "part/content.html"}}
+
+
+<div class="flex-1 p-3 md:py-[35]">
+  <div class="space-y-2 md:space-y-6">
+
+    {{range $l, $k :=.Articles}}
+
+    <div class="card card-side bg-base-200 shadow-xl">
+      <!-- <figure>
+        <img
+          src="https://api.lorem.space/image/movie?w=200&h=280"
+          alt="Movie"
+        />
+      </figure> -->
+
+
+      <div class="card-body">
+        <h2 class="card-title">{{$k.Title}}</h2>
+        <div class="justify-start">
+          <button class="btn btn-xs btn-primary">{{$k.Lable}}</button>
+          <button class="btn btn-xs btn-success">2022-10-21</button>
+          <button class="btn btn-xs btn-success">9:00</button>
+
+        </div>
+        <p>
+          {{$k.Content}}
+        </p>
+      </div>
+    </div>
+
+    {{end}}
+
+   
+    <div class="flex justify-center">
+      <div class="btn-group">
+        <button class="btn">1</button>
+        <button class="btn">2</button>
+        <button class="btn btn-disabled">...</button>
+        <button class="btn">99</button>
+        <button class="btn">100</button>
+      </div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <p class="text-xs pl-4">
+
+
+  </p>
+</div>
+
+{{end}}

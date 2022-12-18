@@ -1,0 +1,65 @@
+{{define "part/album.html"}}
+
+<!-- <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+  </head>
+  <body> -->
+    <script></script>
+<div class="flex-1 p-3 md:py-[35]">
+  <!-- <div class="space-y-2 md:space-y-6"> -->
+  <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+  <div class="drawer-content flex justify-center lg:justify-start">
+    <div class="lg:w-[60vw] max-w-screen-lg lg:pt-4 lg:p-4">
+
+      
+      
+      <div class="flex-1 p-3 md:py-[35]">
+        <div class="space-y-2 md:space-y-6">
+          <div class="card bg-base-200 shadow-xl">
+            <div class="card-body">
+              <h1 class="md:text-3xl font-extrabold" style="padding-left: 7%">照片墙</h1>
+            </div>
+          </div>
+          <div class="card bg-base-200 shadow-xl">
+            <div class="card-body">
+              <div class="flex flex-wrap justify-center gap-8">
+{{range $k :=.Path}}
+                <a href="./categorysingle.html">
+                  <div class="card w-80 h-45 bg-base-100 shadow-xl ">
+                    <figure>
+
+                      <img src="{{$k}}" alt="Movies" />
+                    </figure>
+                    <div class="card-body">
+                      <!-- <h2 class="card-title">{{$k}}</h2> -->
+                    </div>
+                  </div>
+                </a>
+                {{end}}
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <p class="text-sm pl-4">IP{{.IP}}</p>
+        <p class="text-xs pl-4">
+        </p>
+      </div>
+
+    </div>
+  </div>
+  <div class="drawer-side">
+    <label for="my-drawer-2" class="drawer-overlay"></label>
+    <div class="overflow-y-auto flex lg:justify-end w-fit lg:w-[40vw]">
+
+    </div>
+  </div>
+</div>
+
+
+{{end}}
